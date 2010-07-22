@@ -37,7 +37,7 @@ Author
 
 #include "argList.H"
 #include "IFstream.H"
-#include "equationMaster.H"
+#include "equationReader.H"
 
 using namespace Foam;
 
@@ -65,11 +65,11 @@ int main(int argc, char *argv[])
     dimensionedScalar readDSa(testDict->lookup("standAloneDScalar"));
     Info << "done.  Result = " << readDSa << token::NL << endl;
 
-    // Create the equationMaster object
-    Info << "Creating the equationMaster object" << token::NL << endl;
-    equationMaster eqns;
+    // Create the equationReader object
+    Info << "Creating the equationReader object" << token::NL << endl;
+    equationReader eqns;
 
-    // Demonstrate giving data sources to equationMaster
+    // Demonstrate giving data sources to equationReader
     // -First create the data sources
     Info << "Creating data sources: dictionary ptrs... ";
     IFstream tfIF2(path/"testDict2");
@@ -158,7 +158,7 @@ int main(int argc, char *argv[])
     Info << "done.  The result is = " << *passiveOutD << token::NL << endl;
 
     // Demonstrate dependence
-    Info << "Equations can draw from any sources added to equationMaster." << endl;
+    Info << "Equations can draw from any sources added to equationReader." << endl;
     Info << "Equation f is very complex, drawing from numerous sources." << endl;
     Info << "Reading equation f ... ";
     eqns.readEquation(testDict, "f");

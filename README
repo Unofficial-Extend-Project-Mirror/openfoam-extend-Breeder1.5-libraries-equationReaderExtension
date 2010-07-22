@@ -48,13 +48,14 @@ $(equation)/equationOperation/equationOperation.C
 
 6. Execute:
 
-$ tar --transform='s,equationReaderExtension,'$WM_PROJECT_NAME',' -x -v -z -f openfoam-extend-equationReaderExtension.tar.gz
-$ cd $WM_PROJECT_NAME
-$ wmake libso
-$ cd $FOAM_APP/test/equationReaderDemo
-$ wmake
-$ cd $FOAM_APP/test/equationReaderTester
-$ wmake
+tar --transform='s,equationReaderExtension,'$WM_PROJECT_DIR',' \
+-x -v -z -P -f openfoam-extend-equationReaderExtension.tar.gz
+cd $WM_PROJECT_DIR
+wmake libso
+cd $FOAM_APP/test/equationReader/equationReaderDemo
+wmake
+cd $FOAM_APP/test/equationReader/equationReaderTester
+wmake
 
 Contents
 ========

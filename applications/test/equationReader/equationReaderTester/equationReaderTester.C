@@ -37,7 +37,7 @@ Author
 
 #include "argList.H"
 #include "IFstream.H"
-#include "equationMaster.H"
+#include "equationReader.H"
 #include "fvCFD.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -56,9 +56,9 @@ int main(int argc, char *argv[])
 
     fileName path(args.rootPath()/args.caseName());
 
-    // Create the equationMaster object
-    Info << "Creating the equationMaster object" << token::NL << endl;
-    equationMaster eqns;
+    // Create the equationReader object
+    Info << "Creating the equationReader object" << token::NL << endl;
+    equationReader eqns;
 
     // Create dictionaries
     Info << "Reading testDict dictionary" << token::NL << endl;
