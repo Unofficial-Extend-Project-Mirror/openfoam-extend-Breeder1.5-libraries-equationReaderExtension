@@ -46,11 +46,13 @@ $(equation)/equationOperation/equationOperation.C
 
 5. Open a terminal window, and browse to the directory with your download.
 
-6. Execute:
+6. Execute the following commands.  You should be able to copy and paste all 9
+   lines into the terminal window.
 
 tar --transform='s,equationReaderExtension,'$WM_PROJECT_DIR',' \
 -x -v -z -P -f openfoam-extend-equationReaderExtension.tar.gz
 cd $WM_PROJECT_DIR
+rmdepall
 wmake libso
 cd $FOAM_APP/test/equationReader/equationReaderDemo
 wmake
