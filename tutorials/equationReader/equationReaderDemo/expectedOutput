@@ -6,11 +6,11 @@
 |    \\/     M anipulation  | Web:      http://www.OpenFOAM.org               |
 \*---------------------------------------------------------------------------*/
 Exec   : equationReaderDemo
-Date   : Aug 12 2010
-Time   : 13:21:31
-Host   : [host]
-PID    : 8307
-Case   : [casePath]
+Date   : Apr 07 2011
+Time   : 14:13:03
+Host   : Bruce
+PID    : 23813
+Case   : /home/dave/OpenFOAM/dave-1.5-dev/run/tutorials/equationReader/equationReaderDemo
 nProcs : 1
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
